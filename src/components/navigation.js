@@ -6,6 +6,9 @@ import Home from "../pages/home";
 import Notifications from "../pages/notifications";
 import Login from "../pages/login";
 import Signin from "../pages/signin";
+import About from "../pages/About";
+import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
+
 const Drawer = createDrawerNavigator();
 
 export default function Navigation() {
@@ -16,7 +19,7 @@ export default function Navigation() {
           headerStyle: {
             backgroundColor: "dodgerblue",
           },
-          headerTitleAlign: "center",
+          headerTitleAlign: "left",
           headerTintColor: "white",
         }}
       >
@@ -24,7 +27,9 @@ export default function Navigation() {
         <Drawer.Screen name="Notifications" component={Notifications} />
         <Drawer.Screen name="Login" component={Login} />
         <Drawer.Screen name="Signin" component={Signin} />
+        <Drawer.Screen name="About" component={About} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
 }
+
